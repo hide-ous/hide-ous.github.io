@@ -9,10 +9,10 @@ import { Paper } from './paper'
 export class PaperComponent implements OnInit {
 
   paper : Paper = {
-    authors: ['first', 'second'],
+    authors: ['first author', 'second author'],
     key: 'string',
-    title: 'string',
-    venue: 'string',
+    title: 'the title',
+    venue: 'the venue',
     year: 123
   }
 

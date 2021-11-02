@@ -1,1 +1,5 @@
-<p>paper works!</p>
+<div id={{paper.key}}>
+  <p>{{paper.title}}</p>
+  <span *ngFor="let author of paper.authors">{{author}} <br></span>
+  <span>{{paper.venue}}</span> <span>{{paper.year}}</span>
+</div>
