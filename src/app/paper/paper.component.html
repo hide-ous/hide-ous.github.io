@@ -3,10 +3,10 @@
     <span class="papertitle">{{paper.title}}</span>
   </div>
   <div>
-    <span *ngFor="let author of paper.authors; last as isLast" class="paperauthor">
-      {{author.lastname}}
+    <div *ngFor="let author of paper.authors; last as isLast" class="paperauthor">
+      <span [ngClass]="{authorisme:author.lastname==='Samory'}">{{author.lastname}}</span>
       <span *ngIf="!isLast" class="divider">|</span>
-    </span>
+    </div>
   </div>
   <span class="papervenue">{{paper.venue}} {{paper.year}}</span>
 </div>

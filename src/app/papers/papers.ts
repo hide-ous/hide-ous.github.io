@@ -30,6 +30,8 @@ export const AUTHORS: { [id: string] : Author; } = {
   'Sergio': {lastname: 'Canazza', firstname:'Sergio'},
 }
 
+export const ME = AUTHORS['me']
+
 export const PAPERS: Paper[] = [
   {
     authors: [AUTHORS['Federica'], AUTHORS['me'], AUTHORS['Anna'], AUTHORS['Stefano'], AUTHORS['Enoch']],
@@ -407,5 +409,13 @@ export const PAPERS: Paper[] = [
       '}\n',
     formatted: 'Phadke, S., Lloyd, J., Hawdon, J., Samory, M., & Mitra, T. (2018). Framing Hate with Hate Frames: Designing the Codebook. Proceedings of the ACM Extended Abstracts, (CSCW). Retrieved from https://dl.acm.org/doi/10.1145/3272973.3274055'
   },
-]
+].sort(function(a: Paper, b: Paper){
+  if (a.year < b.year) return 1;
+  if (a.year > b.year) return -1;
+  if (a.year === b.year) {
+    if (a.authors[0].lastname==='Samory') return -1;
+    return 1;
+  }
+  return 0;
+})
 
