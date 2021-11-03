@@ -7,6 +7,7 @@ import { PapersComponent } from './papers/papers.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { MedallionComponent } from './medallion/medallion.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ContactsComponent } from './contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
     PaperComponent,
     PapersComponent,
     AboutmeComponent,
-    MedallionComponent
+    MedallionComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
