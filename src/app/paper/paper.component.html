@@ -1,5 +1,12 @@
-<div *ngIf=paper id={{paper.key}}>
-  <p>{{paper.title}}</p>
-  <span *ngFor="let author of paper.authors">{{author.lastname}} <br></span>
-  <span>{{paper.venue}}</span> <span>{{paper.year}}</span>
+<div *ngIf=paper id={{paper.key}} class="paper">
+  <div>
+    <span class="papertitle">{{paper.title}}</span>
+  </div>
+  <div>
+    <span *ngFor="let author of paper.authors; last as isLast" class="paperauthor">
+      {{author.lastname}}
+      <span *ngIf="!isLast" class="divider">|</span>
+    </span>
+  </div>
+  <span class="papervenue">{{paper.venue}} {{paper.year}}</span>
 </div>
