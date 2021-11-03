@@ -3,11 +3,20 @@ body{
   margin-left: 31px;
 
 }
-h2{
+nav a{
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 18px;
   margin-bottom: 7px;
+}
+nav a:visited{
+  color: black;
+}
+nav a:hover{
+  color: red;
+}
+nav a.selectedpage{
+  color: aquamarine;
 }
 .medallion{
   margin-top: 31px;
@@ -25,7 +34,6 @@ h2{
 }
 .paper{
   margin-bottom: 31px;
-  max-width: 600px;
 }
 .paperauthor{
   display: inline;
@@ -40,4 +48,5 @@ h2{
 .divider {
   margin-left: 3px;
   margin-right: 3px;
+  color: #999;
 }

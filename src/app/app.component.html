@@ -1,4 +1,8 @@
 <app-medallion></app-medallion>
-<a href="/assets/docs/samory_cv.pdf">CV</a>
-<app-aboutme></app-aboutme>
-<app-papers></app-papers>
+<nav>
+  <span><a routerLinkActive="selectedpage" routerLink="/aboutme">About</a></span><span class="divider">|</span>
+  <span><a routerLinkActive="selectedpage" routerLink="/papers">Papers</a></span><span class="divider">|</span>
+  <span><a routerLinkActive="selectedpage" href="/assets/docs/samory_cv.pdf">CV</a></span>
+</nav>
+<router-outlet></router-outlet>
+
