@@ -1,7 +1,9 @@
 body{
   font-family: 'Monserrat', sans-serif;
   margin-left: 31px;
-
+}
+span {
+  white-space: pre;
 }
 nav a, h2{
   text-transform: uppercase;
@@ -9,7 +11,8 @@ nav a, h2{
   font-size: 18px;
   margin-bottom: 7px;
   color: black;
-  text-decoration: underline black;
+  /*text-decoration: underline black;*/
+  text-decoration: none;
 }
 h3 {
   text-transform: uppercase;
@@ -20,10 +23,12 @@ h3 {
   color: black;
 }
 nav a:visited{
-  text-decoration: underline black;
+  /*text-decoration: underline black;*/
+  text-decoration: none;
 }
 nav a:hover{
   color: #999;
+  text-decoration: none;
 }
 nav a.selectedpage{
   color: #999;
@@ -33,7 +38,6 @@ nav a.selectedpage{
 a, a:active, a:visited {
   color: black;
   text-decoration: underline #999;
-  /*text-decoration: none;*/
 }
 a:hover{
   text-decoration: none;
@@ -57,8 +61,11 @@ a:hover{
   margin-bottom: 31px;
   /*padding: 5px;*/
 }
+/*.paperauthors {*/
+/*  display: block;*/
+/*}*/
 .paperauthor, .papervenue, .press {
-  display: inline;
+  display: inline-block;
   color: #999;
 }
 
@@ -71,7 +78,6 @@ a:hover{
   color: #999;
 }
 .paperauthor .authorisme{
-  /*font-weight: bold;*/
   color: black;
 }
 .description{

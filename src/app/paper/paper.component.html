@@ -3,7 +3,7 @@
     <div>
       <a class="papertitle" href="{{paper.link}}" target="_blank">{{paper.title}}</a>
     </div>
-    <div>
+    <div class="paperauthors">
       <div *ngFor="let author of paper.authors; last as isLast" class="paperauthor">
         <span [ngClass]="{authorisme:author.lastname==='Samory'}">{{author.lastname}}</span>
         <span *ngIf="!isLast" class="divider">|</span>
@@ -18,8 +18,6 @@
       <span *ngIf="isFirst" class="press">press: </span>
       <a class="press" href="{{release.link}}" target="_blank">{{release.text}}</a>
     </div>
-<!--    <span *ngIf="paper.press" class="divider">|</span>-->
-<!--    <span *ngIf="paper.press" class="award">{{paper.award}}</span>-->
   </div>
   <div class="paperright">{{paper.description}}</div>
 </div>

@@ -78,7 +78,7 @@ export const PAPERS: Paper[] = [
     venue: 'ICWSM',
     year: 2017,
     link: 'https://ojs.aaai.org/index.php/ICWSM/article/view/14890',
-    description: 'description',
+    description: 'Forums help connecting individuals on the autistic spectrum, family members, clinicians, and autism advocates. This work investigates how users in these different categories contribute to the forum and engage with each other.',
     bibtex: '@inproceedings{Samory2017,\n' +
       '  author = {Samory, Mattia and Pizzi, Cinzia and Peserico, Enoch},\n' +
       '  booktitle = {Proceedings of the 11Tth International AAAI Conference on Web and Social Media - ICWSM \'17},\n' +
