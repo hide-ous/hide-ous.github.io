@@ -415,8 +415,14 @@ export const PAPERS: Paper[] = [
   if (a.year === b.year) {
     if (a.award) return -1;
     if (b.award) return 1;
+    if (a.authors[0].lastname==='Samory' && b.authors[0].lastname==='Samory'){
+      if (a.authors.length>b.authors.length) return 1;
+      if (a.authors.length<b.authors.length) return -1;
+      return 0;
+    }
     if (a.authors[0].lastname==='Samory') return -1;
-    return 1;
+    if (b.authors[0].lastname==='Samory') return 1;
+    return 0;
   }
   return 0;
 })
