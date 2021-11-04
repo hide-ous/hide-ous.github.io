@@ -1,12 +1,25 @@
 <div *ngIf=paper id={{paper.key}} class="paper">
-  <div>
-    <span class="papertitle">{{paper.title}}</span>
-  </div>
-  <div>
-    <div *ngFor="let author of paper.authors; last as isLast" class="paperauthor">
-      <span [ngClass]="{authorisme:author.lastname==='Samory'}">{{author.lastname}}</span>
-      <span *ngIf="!isLast" class="divider">|</span>
+  <div class="paperleft">
+    <div>
+      <a class="papertitle" href="{{paper.link}}" target="_blank">{{paper.title}}</a>
     </div>
+    <div>
+      <div *ngFor="let author of paper.authors; last as isLast" class="paperauthor">
+        <span [ngClass]="{authorisme:author.lastname==='Samory'}">{{author.lastname}}</span>
+        <span *ngIf="!isLast" class="divider">|</span>
+      </div>
+    </div>
+    <span class="papervenue">{{paper.venue}} {{paper.year}}</span>
+    <span *ngIf="paper.award" class="divider">|</span>
+    <span *ngIf="paper.award" class="award">{{paper.award}}</span>
+
+    <div *ngFor="let release of paper.press; first as isFirst" class="press">
+      <span class="divider">|</span>
+      <span *ngIf="isFirst" class="press">press: </span>
+      <a class="press" href="{{release.link}}" target="_blank">{{release.text}}</a>
+    </div>
+<!--    <span *ngIf="paper.press" class="divider">|</span>-->
+<!--    <span *ngIf="paper.press" class="award">{{paper.award}}</span>-->
   </div>
-  <span class="papervenue">{{paper.venue}} {{paper.year}}</span>
+  <div class="paperright">{{paper.description}}</div>
 </div>

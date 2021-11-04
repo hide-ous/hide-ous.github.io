@@ -3,6 +3,10 @@ export interface Author {
   lastname: string
 }
 
+export interface PressRelease{
+  text: string;
+  link: string
+}
 export interface Paper {
   key: string;
   authors: Author[];
@@ -11,7 +15,7 @@ export interface Paper {
   venue: string;
   link: string;
   description: string;
-  press?: string[];
+  press?: PressRelease[];
   award?: string;
   bibtex?: string;
   formatted?: string;

@@ -9,16 +9,36 @@ nav a, h2{
   font-size: 18px;
   margin-bottom: 7px;
   color: black;
+  text-decoration: underline black;
 }
-nav a:visited{
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-variant: small-caps;
+  font-size: 13px;
+  margin-bottom: 7px;
   color: black;
 }
+nav a:visited{
+  text-decoration: underline black;
+}
 nav a:hover{
-  color: #ddd;
+  color: #999;
 }
 nav a.selectedpage{
-  color: #ddd;
+  color: #999;
+  text-decoration: none;
 }
+
+a, a:active, a:visited {
+  color: black;
+  text-decoration: underline #999;
+  /*text-decoration: none;*/
+}
+a:hover{
+  text-decoration: none;
+}
+
 .medallion{
   margin-top: 31px;
   font-size: 13px;
@@ -35,13 +55,24 @@ nav a.selectedpage{
 }
 .paper{
   margin-bottom: 31px;
-  padding: 5px;
+  /*padding: 5px;*/
 }
-.paperauthor{
+.paperauthor, .papervenue, .press {
   display: inline;
+  color: #999;
+}
+
+.paperleft, .paperright {
+  /*display: inline-block;*/
+  max-width: 600px;
+}
+
+.paperright{
+  color: #999;
 }
 .paperauthor .authorisme{
-  font-weight: bold;
+  /*font-weight: bold;*/
+  color: black;
 }
 .description{
   max-width: 600px;

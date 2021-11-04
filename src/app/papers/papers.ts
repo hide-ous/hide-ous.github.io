@@ -221,7 +221,7 @@ export const PAPERS: Paper[] = [
   {
     authors: [AUTHORS['Shruti'], AUTHORS['me'], AUTHORS['Tanu']],
     key: 'Phadke2020',
-    title: 'What Makes People Join Conspiracy Communities ?: Role of Social Factors in Conspiracy Engagement',
+    title: 'What Makes People Join Conspiracy Communities?: Role of Social Factors in Conspiracy Engagement',
     venue: 'CSCW',
     year: 2020,
     link: 'https://dl.acm.org/doi/abs/10.1145/3432922',
@@ -234,7 +234,7 @@ export const PAPERS: Paper[] = [
       '  year = {2020}\n' +
       '}\n',
     award: 'Best Paper Honorable Mention',
-    press: ['site1', 'site2'],
+    press: [{text: 'New Scientist', link:'https://www.newscientist.com/article/mg24933193-300-how-social-media-can-nudge-people-into-becoming-conspiracy-theorists/'}],
     formatted: 'Phadke, S., Samory, M., & Mitra, T. (2020). What Makes People Join Conspiracy Communities ?: Role of Social Factors in Conspiracy Engagement. Proceedings of the ACM on Human-Computer Interaction, CSCW. Retrieved from https://dl.acm.org/doi/abs/10.1145/3432922'
   },
   {
@@ -274,7 +274,7 @@ export const PAPERS: Paper[] = [
   {
     authors: [AUTHORS['me'], AUTHORS['Indira'], AUTHORS['Julian'], AUTHORS['Fabian'], AUTHORS['Claudia']],
     key: 'Samory2021a',
-    title: '"Call me sexist, but...": Revisiting Sexism Detection Using Psychological Scales and Adversarial Samples',
+    title: '“Call me sexist, but...”: Revisiting Sexism Detection Using Psychological Scales and Adversarial Samples',
     venue: 'ICWSM',
     year: 2021,
     link: 'https://ojs.aaai.org/index.php/ICWSM/article/view/18085',
@@ -289,7 +289,7 @@ export const PAPERS: Paper[] = [
       'url = {https://ojs.aaai.org/index.php/ICWSM/article/view/18085},\n' +
       'year = {2021}\n' +
       '}\n',
-    press: ['site1', 'site2'],
+    press: [{text: 'gesis', link: 'https://blog.gesis.org/the-call-me-sexist-but-dataset/'}],
     formatted: 'Samory, M., Sen, I., Kohne, J., Floeck, F., & Wagner, C. (2021). “Call me sexist, but...”: Revisiting Sexism Detection Using Psychological Scales and Adversarial Samples. Proceedings of the 15th International AAAI Conference on Web and Social Media. Retrieved from https://ojs.aaai.org/index.php/ICWSM/article/view/18085'
   },
   {
@@ -355,7 +355,6 @@ export const PAPERS: Paper[] = [
       '  year = {2021}\n' +
       '}\n',
     award: 'Best Paper Honorable Mention',
-    press: ['site1', 'site2'],
     formatted: 'Phadke, S., Samory, M., & Mitra, T. (2021). Characterizing Social Imaginaries and Self-Disclosures of Dissonance in Online Conspiracy Discussion Communities. Proceedings of the ACM on Human-Computer Interaction, 5(CSCW). Retrieved from http://arxiv.org/abs/2107.10204'
   },
   {
@@ -373,7 +372,8 @@ export const PAPERS: Paper[] = [
       'volume = {CSCW},\n' +
       '  year = {2018}\n' +
       '}\n',
-    press: ['site1', 'site2'],
+    press: [{text: 'wired', link: 'https://www.wired.com/story/reddit-conspiracy-theorist-study/'},
+            {text: 'ABC news', link: 'https://wset.com/news/local/vt-researchers-study-conspiracies-and-the-people-behind-them'},],
     formatted: 'Samory, M., & Mitra, T. (2018). “The Government Spies Using Our Webcams”: The Language of Conspiracy Theories in Online Discussions. Proceedings of the ACM on Human-Computer Interaction, CSCW. Retrieved from https://dl.acm.org/doi/10.1145/3274421'
   },
   {
@@ -413,6 +413,8 @@ export const PAPERS: Paper[] = [
   if (a.year < b.year) return 1;
   if (a.year > b.year) return -1;
   if (a.year === b.year) {
+    if (a.award) return -1;
+    if (b.award) return 1;
     if (a.authors[0].lastname==='Samory') return -1;
     return 1;
   }
