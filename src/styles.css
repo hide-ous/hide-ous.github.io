@@ -1,6 +1,7 @@
 body{
   font-family: 'Monserrat', sans-serif;
   margin-left: 31px;
+  font-size: 14px;
 }
 span {
   white-space: pre;
@@ -8,11 +9,14 @@ span {
 nav a, h2{
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 7px;
   color: black;
   /*text-decoration: underline black;*/
   text-decoration: none;
+}
+nav {
+  margin-bottom: 31px;
 }
 h3 {
   text-transform: uppercase;
@@ -49,6 +53,7 @@ a:hover{
   margin-bottom: 31px;
   display: block;
   line-height: 80%;
+  color: #999;
 }
 .medallion .affiliation{
   text-transform: lowercase;
@@ -59,6 +64,7 @@ a:hover{
 }
 .paper{
   margin-bottom: 31px;
+  /*font-size: 12px;*/
   /*padding: 5px;*/
 }
 /*.paperauthors {*/
